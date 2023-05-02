@@ -6,19 +6,7 @@ function BotCollection () {
 
 // Retrieve data from the db.json file when adding and editing files
 const [robots, setRobots] = useState (robot);
-const [addBots, setBots] = useState (
-    {
-        name: '',
-        health: '',
-        damage: '',
-        armor: '',
-        bot_class: '',
-        catchphrase: '',
-        avatar_url: '',
-        created_at: '',
-        updated_at: ''
-    }
-);
+const [addBots, setBots] = useState (robot);
 const [editBotId, setBotId] = useState(null);
 const [editBotData, setBotData] = useState (
     {
@@ -38,7 +26,8 @@ const [editBotData, setBotData] = useState (
     <div className='bot-container'>
         {robots.map((robot) => (
             <Fragment>
-            <BotCard robot = {robot} />
+            <BotCard 
+            robot = {robot} />
           </Fragment>
         ))
         }

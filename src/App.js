@@ -9,9 +9,7 @@ function App() {
     <div className="App">
     < BotCollection />
     </div>
-
     </NextUIProvider>
-
   );
 }
 

@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
 import { Card, Grid, Row, Text, Button, Spacer, Progress } from "@nextui-org/react";
 
-const BotCard = ({robot}) => {
-
+const BotCard = ({robot, handleAddBot}) => {
 return (
-    <Grid>
+          <Grid > 
 <Grid.Container gap={2} justify="flex-start" >
-        <Grid xs={6} sm={3}>
+        <Grid xs={6} sm={5}>
           <Card isPressable>
             <Card.Body css={{ mt: 0 }}>
               <Card.Image
                 src={robot.avatar_url}
                 objectFit="cover"
                 width="100%"
-                height={100}
+                height={250}
                 alt={robot.bot_class}
               />
             <Text b>{robot.name}</Text>
@@ -33,9 +32,7 @@ return (
               </Row>
               <Spacer y={2} />
               <Row wrap="wrap" justify="space-between" align="center">
-              <Button color="gradient" auto ghost>Join the Force</Button>
-              <Spacer y={1} />
-              <Button color="gradient" auto ghost>Remove robot</Button>
+              <Button color="gradient" auto ghost onClick={(event) => handleAddBot(event, robot)}>Join the Force</Button>
               </Row>
             </Card.Footer>
           </Card>

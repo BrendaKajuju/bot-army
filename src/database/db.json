@@ -26,7 +26,7 @@
     {
         "id": 103,
         "name": "WrW-76",
-        "health": 21,
+        "health": 78,
         "damage": 96,
         "armor": 47,
         "bot_class": "Tank",
@@ -38,7 +38,7 @@
     {
         "id": 104,
         "name": "PxK-7",
-        "health": 21,
+        "health": 45,
         "damage": 46,
         "armor": 89,
         "bot_class": "Damage",

@@ -22,6 +22,15 @@ const [editBotData, setBotData] = useState (
     }
 );
 
+// Create a function to add bot to the collection
+const handleAddBot = (event, robot) => {
+    event.preventDefault();
+    setBots(robot.id);
+
+    const robotarmy = {
+
+    }
+}
   return (
     <div className='bot-container'>
         {robots.map((robot) => (
@@ -34,5 +43,4 @@ const [editBotData, setBotData] = useState (
     </div>
   )
 }
-
 export default BotCollection

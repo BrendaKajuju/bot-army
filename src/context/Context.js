@@ -31,10 +31,8 @@ export const Context = (props) => {
           const tempstate2 = state.filter(
             (bots) => bots.id !== action.payload.id
           );
-  
           return tempstate2;
-  
-        default:
+          default:
           return state;
       }
     };

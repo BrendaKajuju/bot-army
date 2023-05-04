@@ -3,9 +3,8 @@ import { Botcontext } from "../context/Context";
 import { Card, Grid, Row, Text, Button, Spacer, Progress } from "@nextui-org/react";
 
 const YourBotArmy = () => {
-  const Globalstate = useContext(Botcontext);
-  const state = Globalstate.state;
-  const dispatch = Globalstate.dispatch;
+  const { state, dispatch } = useContext(Botcontext);
+
 
   return (
     <div className='army'>

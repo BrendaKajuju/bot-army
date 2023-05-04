@@ -11,7 +11,9 @@ function App() {
       <Nav />  
     < BotCollection />
     </div>
+
     </NextUIProvider>
+
   );
 }
 

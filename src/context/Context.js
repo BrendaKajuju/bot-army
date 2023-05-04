@@ -1,16 +1,16 @@
 //Provide context that will handle the addition of bots into the army
 import { createContext, useReducer } from "react";
 
-export const context = createContext();
-
 //Add a context that will automatically add robots to the army when passed down to your bot army
-
+export const Botcontext = createContext();
 export const Context = (props) => {
     const reducer = (state, action) => {
       switch (action.type) {
         //Initiate adding first robot to army when the bot is selected
         case "ADD":
-          const tempstate = state.filter((bots) => action.payload.id === bots.id);
+          const tempstate = state.filter(
+            (bots) => action.payload.id === bots.id && action.payload.quantity === bots.quantity)
+            ;
           if (tempstate.length > 0) {
             return state;
           } else {
@@ -41,5 +41,4 @@ export const Context = (props) => {
     return (
       <Botcontext.Provider value={info}>{props.children}</Botcontext.Provider>
     );
-
 }

@@ -46,7 +46,7 @@ const BotCard = () => {
               <Text color="error" small b>Damage</Text>
               <Progress value={bots.damage} color="error" status="error" />
               <Text color="warning" small b>Armor</Text>
-              <Progress value={bots.damage} color="warning" status="warning" />
+              <Progress value={bots.armor} color="warning" status="warning" />
             </Grid>
           </Card.Body>
           <Card.Footer css={{ justifyItems: "flex-start" }}>

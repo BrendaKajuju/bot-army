@@ -1,7 +1,7 @@
 //component used to display all bots
 import React, { useState, useEffect, useContext } from 'react';
 import axios from "axios";
-import BotContext from "../context/Context"
+import { Botcontext } from "../context/Context"
 import { Card, Grid, Row, Text, Button, Spacer, Progress } from "@nextui-org/react";
 
 const BotCard = () => {
@@ -18,7 +18,7 @@ const BotCard = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  const Globalstate = useContext(BotContext);
+  const Globalstate = useContext(Botcontext);
   const dispatch = Globalstate.dispatch;
   console.log(Globalstate);
   return (
@@ -56,7 +56,7 @@ const BotCard = () => {
             <Row wrap="wrap" justify="space-between" align="center">
                 <Button color="gradient" 
                 auto ghost 
-                onClick={() => dispatch({ type: "ADD", payload: item })}>Join the Force</Button>
+                onClick={() => dispatch({ type: "ADD", payload: bots })}>Join the Force</Button>
             </Row>          
           </Card.Footer>
         </Card>

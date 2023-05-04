@@ -1,13 +1,11 @@
-import { Navlink } from "react-router-dom";
-import NavbarLink from "@nextui-org/react/types/navbar/navbar-link"
-
+import { NavLink } from "react-router-dom";
 
 //Provide option to either view the Whole Army Selection or Your personal army
 const Nav = () => {
 return(
     <div className="nav">
-        <Navlink to="/">Whole Globutron Force </Navlink>
-        <Navlink to="/army">Add to your Force </Navlink>
+        <NavLink to="/">Whole Globutron Force </NavLink>
+        <NavLink to="/army">Add to your Force </NavLink>
     </div>
 );
 };

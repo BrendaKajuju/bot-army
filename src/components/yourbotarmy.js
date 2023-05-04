@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react';
-import { BotContext } from "../context/Context";
+import { Botcontext } from "../context/Context";
 import { Card, Grid, Row, Text, Button, Spacer, Progress } from "@nextui-org/react";
 
 const YourBotArmy = () => {
-  const Globalstate = useContext(BotContext);
+  const Globalstate = useContext(Botcontext);
   const state = Globalstate.state;
   const dispatch = Globalstate.dispatch;
 
@@ -42,7 +42,7 @@ const YourBotArmy = () => {
                     <Row wrap="wrap" justify="space-between" align="center">
                       <Button color="gradient" 
                       auto ghost 
-                      onClick={() => dispatch({ type: "REMOVE", payload: item })}>Exit the Force</Button>
+                      onClick={() => dispatch({ type: "REMOVE", payload: bots })}>Exit the Force</Button>
                     </Row>
                 </Card.Footer>
               </Card>
